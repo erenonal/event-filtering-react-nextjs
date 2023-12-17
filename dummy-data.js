@@ -1,32 +1,32 @@
 const DUMMY_EVENTS = [
   {
-    id: 'e1',
-    title: 'Programming for everyone',
+    id: "e1",
+    title: "LOTR 1",
     description:
-      'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
-    location: 'Somestreet 25, 12345 San Somewhereo',
-    date: '2021-05-12',
-    image: 'images/coding-event.jpg',
+      "The legendary first film of The Lord of the Rings series, 'The Fellowship of the Ring,' returns to the big screen, immersing audiences in its enchanting world and epic adventures once again. This timeless masterpiece, filled with the magic of Middle-earth, offers audiences a unique cinematic experience with its unforgettable characters and breathtaking landscapes.",
+    location: "Hobbit Street, Shire",
+    date: "2021-10-11",
+    image: "images/lotr_1.jpeg",
     isFeatured: false,
   },
   {
-    id: 'e2',
-    title: 'Networking for introverts',
+    id: "e2",
+    title: "LOTR 2",
     description:
-      "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
-    location: 'New Wall Street 5, 98765 New Work',
-    date: '2021-05-30',
-    image: 'images/introvert-event.jpg',
+      "The second installment of the epic Middle-earth saga, 'The Lord of the Rings: The Two Towers,' reintroduces audiences to thrilling battle sequences and the epic journey of unforgettable heroes, presenting an enthralling continuation of the enchanting story.",
+    location: "Saruman Street, Isengard",
+    date: "2022-10-12",
+    image: "images/lotr_3.jpeg",
     isFeatured: true,
   },
   {
-    id: 'e3',
-    title: 'Networking for extroverts',
+    id: "e3",
+    title: "LOTR 3",
     description:
-      'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
-    location: 'My Street 12, 10115 Broke City',
-    date: '2022-04-10',
-    image: 'images/extrovert-event.jpg',
+      "The magnificent finale of the legendary 'The Lord of the Rings' series, 'The Return of the King,' delivers an unforgettable experience, reaching the climax of war with captivating visuals and emotional depth, inviting audiences to witness the conclusion of an epic saga.",
+    location: "Sauron Street, The Mount Doom",
+    date: "2023-10-13",
+    image: "images/lotr_2.jpeg",
     isFeatured: true,
   },
 ];
@@ -44,7 +44,9 @@ export function getFilteredEvents(dateFilter) {
 
   let filteredEvents = DUMMY_EVENTS.filter((event) => {
     const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
+    return (
+      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
+    );
   });
 
   return filteredEvents;
